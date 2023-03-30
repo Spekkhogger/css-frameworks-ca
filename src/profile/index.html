@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../../dist/css/index.css">
     <title>Social Network feed</title>
 </head>
@@ -29,35 +30,27 @@
           </nav>
     </header>
     <main>
-        <div class="container profile">
-            <div>
-                <img src="../images/IMG_3703 Medium.jpeg" alt="profile image" class="img-thumbnail float-start">
-                <div class="">
-                    <h3>Username</h3>
-                    <h4>Full Name</h4>
-                    <p>Amount of followers</p>
+        <div class="container-fluid mt-3">
+            <div class="row justify-content-center">
+              <div class="col-md-3 col-sm-4 col-lg-5 col-xs-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-3 col-sm-4 col-xs-12">
+                        <img src="../images/IMG_3703 Medium.jpeg" alt="profile image" class="img-thumbnail float-start rounded-circle">
+                      </div>
+                      <div class="col-md9 col-sm-8 col-xs-12">
+                        <h2>Username</h2>
+                        <p>Full name</p>
+                        <p>Follower count</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div>
-                <button class="btn btn-primary">
-                    Follow
-                </button>
-                <button class="btn btn-primary">
-                    Message
-                </button>
-            </div>
-        </div>
-        <div class="container post-list d-flex">
-            <div class="wrap">
-                <div class="col-4">Post one</div>
-                <div class="col-4">Post two</div>
-                <div class="col-4">Post three</div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-            </div>
-        </div>
+
     </main>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

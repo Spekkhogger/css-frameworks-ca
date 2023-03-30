@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../../dist/css/index.css">
     <title>Social Network feed</title>
 </head>
@@ -29,31 +30,22 @@
           </nav>
     </header>
     <main>
-      <div class="container mx-auto mt-1">
-        <form class="form-inline">
-          <div class="row">
-            <div class="col-lg-6 col-md-5 col-sm-9">
-              <input type="search" class="form-control" aria-label="search" placeholder="Search">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-              <button class="btn btn-primary">Search</button>
-            </div>
+      <div class="container-fluid mt-3">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search posts">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">Search</button>
+            <button class="btn btn-primary dropdown-toggle" id="filter" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sort by</button>
+            <ul class="dropdown-menu" aria-labelledby="filter">
+              <li><a href="#" class="dropdown-item">Newest</a></li>
+              <li><a href="#" class="dropdown-item">Oldest</a></li>
+              <li><a href="#" class="dropdown-item">Popular</a></li>
+            </ul>
           </div>
-        </form>
-      </div>
-      <div class="container mx-auto mt-2">
-
-        <div class="row">
-          <form action="" class="form-group">
-            <label for="exampleFormControlTextarea1">Create a new post</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <button class="btn btn-primary">Share!</button>
-          </form>
         </div>
-
-      </div>
-        
+      </div>  
 
     </main>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
