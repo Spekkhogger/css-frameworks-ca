@@ -1,1 +1,11 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
+body {
+    background: rgb(208, 152, 230);
+}
+
+
+.img-thumbnail {
+    max-height: 200px;
+}
