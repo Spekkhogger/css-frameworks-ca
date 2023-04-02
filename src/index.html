@@ -10,13 +10,13 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../dist/css/index.css">
     <!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/> -->
-    <title>Social Network</title>
+    <title>ImageShare</title>
   </head>
-  <body>
+  <body  class="bg-image" style="background-image: url('images/bg-image.jpeg');">
     <header>
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Social Network</a>
+              <a class="navbar-brand" href="#">ImageShare</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -33,32 +33,40 @@
             </div>
           </nav>
     </header>
+    
     <main>
-      <div class="container-fluid">
+      <div class="container-fluid bg-image">
         <div class="row">
           <div class="col">
             <div class="card mt-5 bg-light bg-opacity-75 p-5 col-lg-5 text-center mx-auto">
               <div class="text-center">
-                <h3>Welcome</h3>
+                <h3 id="login">Log in</h3>
               </div>
-              <div class="card-body">
-                <form action="" method="post">
+              <div class="card-body" id="card-body">
+                <form action="profile/index.html" method="" class="needs-validation" novalidate>
                   <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email">
-                    <label for="email">Enten Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">
+                      Incorrect email
+                    </div>
+                    <label for="email">Enter Email</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="password">
+                    <input type="password" class="form-control" id="password" required>
+                    <div class="invalid-feedback">
+                      Needs to be 8 characters
+                    </div>
                     <label for="password">Enter password</label>
                   </div>
-                  <button type="submit" class="btn btn-primary">Log in</button>
+                  <button type="submit" class="btn btn-primary" id="sign-btn">Log in</button>
                 </form>
-                <a href="#" class="text-dark">New user? Create an account</a>
+                <a href="#" class="text-dark" id="new-user">New user? Create an account</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
 
 
 
@@ -108,5 +116,7 @@
         </div> -->
     </main>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <!-- <script src="scripts/createAccount.js"></script> -->
+    <script src="scripts/validation.js"></script>
+  </body> 
 </html>

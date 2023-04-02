@@ -22,7 +22,7 @@
                     <a class="nav-link" href="../feed/index.html">Feed</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" href="profile/index.html">Profile</a>
+                    <a class="nav-link active" href="#">Profile</a>
                   </li>
                 </ul>
               </div>
@@ -32,25 +32,108 @@
     <main>
         <div class="container-fluid mt-3">
             <div class="row justify-content-center">
-              <div class="col-md-3 col-sm-4 col-lg-5 col-xs-12">
-                <div class="card">
-                  <div class="card-body">
+              <div class="col-md-6 col-sm-4 col-lg-9 col-xs-12">    
                     <div class="row">
                       <div class="col-md-3 col-sm-4 col-xs-12">
-                        <img src="../images/IMG_3703 Medium.jpeg" alt="profile image" class="img-thumbnail float-start rounded-circle">
+                        <img src="../images/profile.jpeg" alt="profile image" class="img-thumbnail float-start rounded-circle" id="profile-page-picture">
                       </div>
                       <div class="col-md9 col-sm-8 col-xs-12">
-                        <h2>Username</h2>
+                        <h2>@ Username</h2>
                         <p>Full name</p>
-                        <p>Follower count</p>
+                        <p id="follower-count">Followers: 1032</p>
                       </div>
                     </div>
-                  </div>
+                    <div class="row">
+                      <div class="col mt-md-3">
+                        <button class="btn btn-primary" id="follow-button">
+                          Follow
+                        </button>
+                        <button class="btn btn-primary" id="send-message" data-bs-toggle="modal" data-bs-target="#messageModal">
+                          Send message
+                        </button>
+
+                        <!-- Modal for messaging -->
+                        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="messageModalLabel">Send a message</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form>
+                                  <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Send Message</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content on profile page -->
+          
+          <div class="container mx-auto mt-3">
+            <div class="row">
+              <div class="col-6 col-md-2 profile-posts">
+                <img src="../images/post1.jpeg" alt="image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="../images/post1.jpeg">
+              </div>
+              <div class="col-6 col-md-2 profile-posts">
+                <img src="../images/post2.jpeg" alt="image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="../images/post2.jpeg">
+              </div>
+              <div class="col-6 col-md-2 m-1 profile-posts">
+                <img src="../images/post3.jpeg" alt="image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="../images/post3.jpeg">
+              </div>
+              <div class="col-6 col-md-2 m-1 profile-posts">
+                <img src="../images/post4.jpeg" alt="image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="../images/post4.jpeg">
+              </div>
+              <div class="col-6 col-md-2 profile-posts">
+                <img src="../images/post5.jpeg" alt="image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="../images/post5.jpeg">
+              </div>
+              <div class="col-6 col-md-2 profile-posts">
+                <img src="../images/post1.jpeg" alt="image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="../images/post1.jpeg">
+              </div>
+              <div class="col-6 col-md-2 profile-posts">
+                <img src="../images/post2.jpeg" alt="image" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-src="../images/post2.jpeg">
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal for image -->
+          <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <img class="img-fluid" id="modal-image">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
+          </div>
+
 
     </main>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/profile.js"></script>
+    <script src="../scripts/imageModal.js"></script>
 </body>
 </html>

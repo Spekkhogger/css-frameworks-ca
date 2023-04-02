@@ -2,11 +2,33 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 body {
-    background: rgb(208, 152, 230);
+    background: rgb(239, 239, 239);
 }
 
-
-.img-thumbnail {
+.img-fluid {
+    object-fit: cover;
+    min-height: 200px;
     max-height: 200px;
+}
+
+.bg-image {
+    height: 100vh !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.rounded-circle {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+img {
+    max-height: 300px;
+}
+
+#profile-page-picture {
+    width: 180px;
+    height: 180px;
 }
 
